@@ -1,0 +1,13 @@
+.content_index .title_index h2{
+    font-size: 80px;
+    font-family: "Amatic SC", sans-serif;
+    text-align: left;
+}
+
+.content_index .p_index{
+    font-family:'Times New Roman', Times, serif;
+    padding-left: 0;
+    text-align: justify;
+}
+
+

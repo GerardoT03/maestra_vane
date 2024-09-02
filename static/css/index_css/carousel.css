@@ -1,22 +1,11 @@
-.title-index{
-    text-align: center;
-}
-
-.content-index{
-    margin-left: 150px;
-    margin-right: 150px;
-}
-
-.content-index p {
-    text-align: justify;
-}
-
 .carousel {
-    width: 70%; /* El carrusel ocupará el 70% del ancho del contenedor padre */
-    max-width: 800px; /* Establece un límite máximo de ancho de 800px */
-    margin: 0 auto; /* Centra el carrusel horizontalmente dentro de la página */
-    padding-top: 20px; /* Añade espacio superior para separar el carrusel del contenido superior */
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    z-index: 0; /* Asegúrate de que el z-index del carrusel sea menor que el dropdown */
+    position: relative;
 }
+
 
 .carousel-item {
     background-size: contain;
@@ -26,8 +15,8 @@
 }
 
 .carousel-item img {
-    height: 400px; /* O cualquier otra altura que prefieras */
-    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
+    height: 100%; /* O cualquier otra altura que prefieras */
+    object-fit: contain;  /*Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
     background-color: #000; /* Opcional: Cambia el color de fondo para que sea visible */
     display: none; /* Ocultamos la imagen normal, ya que usamos la imagen de fondo */

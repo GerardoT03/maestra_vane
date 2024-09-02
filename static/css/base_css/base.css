@@ -6,7 +6,6 @@ hr {
 }
 
 body {
-    background-image: url("{% static '' %}");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

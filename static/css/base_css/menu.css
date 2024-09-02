@@ -12,13 +12,13 @@
     font-size: 25px;
 }
 
-.menu .list-menu li{
+.menu .list-menu li a{
    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.menu .list-menu li:hover {
+/*.menu .list-menu li:hover {
     transform: scale(1.1);
-}
+}*/
 
 .menu .list-menu li a:hover {
     transform: scale(1.1);
@@ -49,17 +49,21 @@
 }
 
 .dropdown-menu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+    opacity: 0;
+    will-change: opacity, transform;
+    transition: opacity 0.3s ease, z-index 0s ease 0.3s;
 }
+
+.dropdown-menu.show {
+    opacity: 1;
+    z-index: 1001; /* Asegura que tenga un z-index alto durante la animación */
+    transition: opacity 0.3s ease;
+}
+
 
 .dropdown-menu li {
     padding: 10px;
@@ -71,5 +75,5 @@
 }
 
 .dropdown-menu li a:hover {
-    background-color: #f0f0f0;
+    background-color: #333;
 }

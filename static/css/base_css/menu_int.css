@@ -1,0 +1,75 @@
+/* Div principal */
+.index-data {
+    padding-top: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 100%; /* Asegura que no sobrepase el 100% del contenedor padre */
+    margin: 0 auto; /* Centra el div en la página */
+    box-sizing: border-box; /* Incluye el padding y border en el tamaño total */
+}
+
+/* Index data box 1 */
+.index-data-box-1 {
+    background-color: transparent;
+}
+
+/* TITLE BOX 1 */
+.index-data .index-data-box-1 .index-data-box-1-title h2 {
+    font-size: 6vw; /* Responsivo con respecto al ancho de la ventana */
+    font-family: "Amatic SC", sans-serif;
+    text-align: center;
+}
+
+/* P BOX 1 */
+.index-data .index-data-box-1 p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Dropdown section content BOX 2 */
+.index-data-box-2-dropdown-section-content {
+    display: flex;
+    border: 1px solid;
+    background-color: transparent;
+    justify-content: space-evenly;
+}
+
+/* BUTTONS */
+.index-data-box-2-dropdown-section-content-button {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 2vw; /* Ajusta el tamaño de la fuente según el ancho de la ventana */
+    padding-right: 5%;
+}
+
+.index-data-box-2-dropdown-section-content-button-button1-1{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.index-data-box-2-dropdown-section-content-button-button1-1.active {
+    font-weight: bold;
+}
+
+/* BOX 3 */
+.index-data-box-3 {
+    background-color: white;
+    border: 1px solid;
+}
+
+.index-data-box-3-content-wrapper p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.index-data-box-3-content-wrapper-title h2 {
+    font-family: "Amatic SC", sans-serif;
+}
+
+.index-data-box-3 > div {
+    display: none; /* Oculta todos los contenidos inicialmente */
+}
+
+
+
+
+
+

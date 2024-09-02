@@ -1,0 +1,23 @@
+{% load static %}
+{% block style%} <link rel="stylesheet" href="{% static 'css/base_css/menu.css' %}"> {% endblock %}
+
+<nav class="menu">
+        <ul class="list-menu">
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Diseños</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Vocales</a></li>
+                    <li><a href="#">Abecedario</a></li>
+                    <li><a href="#">Colores</a></li>
+                    <li><a href="#">Numeros</a></li>
+                    <li><a href="#">Animales</a></li>
+                    <li><a href="#">Frutas y verduras</a></li>
+
+                </ul>
+            </li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+</nav>
+
+<script src="{% static 'js/base_js/menu.js' %}"> </script>
