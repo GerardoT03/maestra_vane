@@ -1,0 +1,12 @@
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}?v={{ time.now }}">
+{% endblock %}
+
+<nav class="header" >
+    <ul id="list-header">
+        <li><img src="{% static 'img/logo_3.png' %}" alt="" width="80px"></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+</nav>

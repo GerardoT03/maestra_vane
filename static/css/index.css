@@ -1,0 +1,52 @@
+.title-index{
+    text-align: center;
+}
+
+.content-index{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.content-index p {
+    text-align: justify;
+}
+
+.carousel {
+    width: 70%; /* El carrusel ocupará el 70% del ancho del contenedor padre */
+    max-width: 800px; /* Establece un límite máximo de ancho de 800px */
+    margin: 0 auto; /* Centra el carrusel horizontalmente dentro de la página */
+    padding-top: 20px; /* Añade espacio superior para separar el carrusel del contenido superior */
+}
+
+.carousel-item {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px; /* Ajusta según sea necesario */
+}
+
+.carousel-item img {
+    height: 400px; /* O cualquier otra altura que prefieras */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    background-color: #000; /* Opcional: Cambia el color de fondo para que sea visible */
+    display: none; /* Ocultamos la imagen normal, ya que usamos la imagen de fondo */
+}
+
+
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 90%; /* Ancho más amplio en pantallas pequeñas */
+    }
+    .carousel-item img {
+        height: 300px; /* Reduce la altura de las imágenes en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        object-fit: contain; /* Cambia a contain en pantallas más pequeñas */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+}

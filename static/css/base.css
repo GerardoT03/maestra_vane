@@ -1,0 +1,13 @@
+hr {
+    border: 1px solid rgb(168, 68, 85); /* Línea negra visible */
+    padding: 0;
+    background-color: none;
+    margin: 0;
+}
+
+body {
+    background-image: url("{% static '' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

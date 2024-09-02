@@ -1,0 +1,75 @@
+.menu .list-menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.menu .list-menu li a{
+    text-decoration: none;
+    color: black;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 25px;
+}
+
+.menu .list-menu li{
+   transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu .list-menu li:hover {
+    transform: scale(1.1);
+}
+
+.menu .list-menu li a:hover {
+    transform: scale(1.1);
+    color: pink;
+}
+
+@font-face {
+    font-family: 'PermanentMarker';
+    src: url('/static/fonts/PermanentMarker-Regular.ttf') format('truetype');
+}
+
+
+
+.menu {
+    position: relative;
+}
+
+.list-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.list-menu > li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+}

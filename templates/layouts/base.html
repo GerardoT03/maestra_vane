@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}?v={{ time.now }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Permanent+Marker&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Antic+Slab&family=Permanent+Marker&display=swap');
+    </style>
+
+        
+    {% block style %}{% endblock %}
+</head>
+<body>
+    {% include 'layouts/partials/header.html' %} <hr>
+    {% include 'layouts/partials/menu.html' %} <hr>
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include 'layouts/partials/footer.html' %}
+
+
+</body>
+</html>
