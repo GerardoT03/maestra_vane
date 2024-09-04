@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +31,6 @@ SECRET_KEY = 'django-insecure-$gbx%(#-*8$!-)b$f6$9*1lvwl3leb^%t+fkh5ak9q!^$5^w*=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -81,14 +86,7 @@ WSGI_APPLICATION = 'maestra_vane.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'maestra_vane',
-        'USER': 'postgres',
-        'PASSWORD':'518349276',
-        'HOST':'127.0.0.1',
-        'DATABASE_PORT':'5432',
-    }
+    'default' : dj_database_url.config(default = os.getenv('DATABASE_URL')) 
 }
 
 
@@ -127,8 +125,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR / "static")
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR / "staticfiles")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
@@ -136,4 +137,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ALLOWED_HOSTS = ['Localhost', 'web-production-7196.up.railway.app']
+ALLOWED_HOSTS = ['localhost', 'web-production-7196.up.railway.app']
+
+
+
+CSRF_TRUSTED_ORIGINS = ['http://*','https://web-production-7196.up.railway.app']
