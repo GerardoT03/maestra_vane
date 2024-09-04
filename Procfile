@@ -1,0 +1,1 @@
+web: gunicorn maestra_vane.wsgi

@@ -6,6 +6,29 @@
 {% endblock %}
 
 {% block content %}
-{% include 'layouts/partials/index_partials/carousel_index.html' %} 
+{% include 'layouts/partials/index_partials/carousel_index.html' %}
+{% include 'layouts/partials/base_partials/menu_int.html' %} <br>
+
+<div class="div-agradecimiento-index">
+    <div class="agradecimiento-index">
+        <h2>¡Gracias por visitar nuestra página web!</h2><br><br>
+        <p>
+            Queremos expresar nuestro sincero agradecimiento 
+            por tomarte el tiempo de explorar nuestro sitio. 
+            Tu interés y apoyo son muy valiosos para nosotros. 
+            Estamos comprometidos en ofrecerte la mejor experiencia y en continuar mejorando. 
+            Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nosotros. <br><br>
+        
+            ¡Esperamos verte de nuevo pronto! <br><br>
+        
+            Con aprecio, Maestra Vane
+        </p>
+    </div>
+    <div class="div-agradecimiento-index-img">
+        <img src="{% static 'img/index_img/logo_4.png' %}" alt="">
+    </div>
+</div>
+
+
 
 {% endblock %}

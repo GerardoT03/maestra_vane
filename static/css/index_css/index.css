@@ -1,13 +1,26 @@
-.content_index .title_index h2{
-    font-size: 80px;
-    font-family: "Amatic SC", sans-serif;
-    text-align: left;
+.div-agradecimiento-index{
+    display: flex;
 }
 
-.content_index .p_index{
-    font-family:'Times New Roman', Times, serif;
-    padding-left: 0;
+.agradecimiento-index {
+    border: 0.5px solid transparent; /* Grosor del borde reducido */
+    padding: 10px; /* Espacio interno reducido */
+    width: 50%; /* Ancho reducido */
+    font-size: 14px; /* Tamaño del texto reducido */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho y alto */
+}
+
+
+.agradecimiento-index h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+.agradecimiento-index p{
     text-align: justify;
 }
 
-
+.div-agradecimiento-index-img img{
+    width: 600px;
+}
+.div-agradecimiento-index-img{
+    padding-left: none;
+}
