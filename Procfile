@@ -1,1 +1,1 @@
-web: gunicorn maestra_vane.wsgi
+web: python manage.py collectstatic && gunicorn maestra_vane.wsgi
