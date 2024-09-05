@@ -138,4 +138,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.getenv('RAILWAY_PRIVATE_DOMAIN')]
 CSRF_TRUSTED_ORIGINS = ['https://mi-dominio-privado.railway.app']
-DEBUG = os.getenv('DEBUG')
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
