@@ -1,26 +1,51 @@
-.div-agradecimiento-index{
+.div-agradecimiento-index {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(179, 79, 96); /* Color de fondo suave */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 20px auto;
+    max-width: 900px; /* Ancho máximo */
 }
 
 .agradecimiento-index {
-    border: 0.5px solid transparent; /* Grosor del borde reducido */
-    padding: 10px; /* Espacio interno reducido */
-    width: 50%; /* Ancho reducido */
-    font-size: 14px; /* Tamaño del texto reducido */
-    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho y alto */
-}
-
-
-.agradecimiento-index h2{
-    font-family: 'Times New Roman', Times, serif;
-}
-.agradecimiento-index p{
+    font-family: 'Amatic SC', sans-serif; /* Fuente que usas */
+    font-size: 1.5vw; /* Tamaño adaptativo */
+    font-weight: bolder;
     text-align: justify;
+    max-width: 100%;
+    color: #ffffff; /* Color de texto */
+    padding-right: 5%;
+    
 }
 
-.div-agradecimiento-index-img img{
-    width: 600px;
+.agradecimiento-index h2 {
+    font-size: 3vw;
+    text-align: center;
+    color: #ffffff; /* Título en color negro */
 }
-.div-agradecimiento-index-img{
-    padding-left: none;
+
+.div-agradecimiento-index-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra en la imagen */
+}
+
+@media screen and (max-width: 768px) {
+    .div-agradecimiento-index {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .agradecimiento-index {
+        max-width: 100%;
+    }
+
+    .div-agradecimiento-index-img img {
+        margin-top: 20px;
+        max-width: 80%; /* Imagen más pequeña en pantallas pequeñas */
+    }
 }

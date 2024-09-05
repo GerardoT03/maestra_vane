@@ -52,16 +52,15 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1001;
+    z-index: -1; /* Inicialmente, lo colocamos detrás */
     opacity: 0;
     will-change: opacity, transform;
-    transition: opacity 0.3s ease, z-index 0s ease 0.3s;
+    transition: opacity 0.3s ease; /* Solo transicionamos la opacidad */
 }
 
 .dropdown-menu.show {
     opacity: 1;
-    z-index: 1001; /* Asegura que tenga un z-index alto durante la animación */
-    transition: opacity 0.3s ease;
+    z-index: 1001; /* Asegura que el menú esté visible cuando se muestra */
 }
 
 

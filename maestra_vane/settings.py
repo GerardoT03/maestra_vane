@@ -15,7 +15,6 @@ import os
 import dj_database_url
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$gbx%(#-*8$!-)b$f6$9*1lvwl3leb^%t+fkh5ak9q!^$5^w*='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 
 
@@ -86,7 +85,7 @@ WSGI_APPLICATION = 'maestra_vane.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default' : dj_database_url.config(default = os.getenv('DATABASE_URL')) 
+    'default' : dj_database_url.config(default = os.getenv('DATABASE_URL')),
 }
 
 
@@ -137,8 +136,5 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ALLOWED_HOSTS = ['localhost', 'web-production-4785.up.railway.app']
-
-
-
-CSRF_TRUSTED_ORIGINS = ['http://*','https://web-production-4785.up.railway.app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.getenv('RAILWAY_PRIVATE_DOMAIN')]
+CSRF_TRUSTED_ORIGINS = ['https://mi-dominio-privado.railway.app']

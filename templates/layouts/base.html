@@ -19,15 +19,21 @@
 <body>
     {% include 'layouts/partials/base_partials/header.html' %} <hr>
     {% include 'layouts/partials/base_partials/menu.html' %} <hr>
+    
+    <div class="wrapper">
+        <div class="content">
+            {% block content %}
 
-    {% block content %}
-
-    {% endblock %}
+            {% endblock %}
+        </div>
+        <div class="footer">
+            {% include 'layouts/partials/base_partials/footer.html' %}
+            © 2024 Tu Sitio Web
+        </div>
+    </div>
+    
     
 
     
-    
-
-    {% include 'layouts/partials/base_partials/footer.html' %}
 </body>
 </html>
