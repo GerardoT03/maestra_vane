@@ -4,3 +4,4 @@
 - 💞️ I’m looking to collaborate on a team developers
 - 📫 How to reach me, my email address is gerardotejeda944@gmail.com 
 - ⚡ Fun fact: I'm really like this work
+- web : https://web-production-4785.up.railway.app/
