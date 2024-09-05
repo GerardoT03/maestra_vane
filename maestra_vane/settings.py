@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$gbx%(#-*8$!-)b$f6$9*1lvwl3leb^%t+fkh5ak9q!^$5^w*='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+
 
 
 
@@ -138,3 +138,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.getenv('RAILWAY_PRIVATE_DOMAIN')]
 CSRF_TRUSTED_ORIGINS = ['https://mi-dominio-privado.railway.app']
+DEBUG = os.getenv('DEBUG')
