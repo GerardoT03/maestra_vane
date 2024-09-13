@@ -11,9 +11,11 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
 import os
 import dj_database_url
-from dotenv import load_dotenv
+
+
 
 load_dotenv()
 
@@ -42,11 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
-    'user',
-    'Products',
-    'Cart',
-    'Orders',
-    'Reviews',
+    'applications.User',
 ]
 
 MIDDLEWARE = [
@@ -84,9 +82,21 @@ WSGI_APPLICATION = 'maestra_vane.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
 DATABASES = {
-    'default' : dj_database_url.config(default = os.getenv('DATABASE_URL')),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('DATABASE_NAME'),
+        'USER': os.getenv('DATABASE_USER'),
+        'PASSWORD': os.getenv('DATABASE_PASSWORD'),
+        'HOST': os.getenv('DATABASE_HOST'),
+        'PORT': os.getenv('DATABASE_PORT'),
+    }
 }
+
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
+
+
 
 
 # Password validation
@@ -131,11 +141,13 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR / "staticfiles")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.getenv('RAILWAY_PRIVATE_DOMAIN')]
-CSRF_TRUSTED_ORIGINS = ['https://mi-dominio-privado.railway.app']
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+#Default primary key field type
+#https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+#os.getenv('RAILWAY_PRIVATE_DOMAIN')
+#CSRF_TRUSTED_ORIGINS = ['https://mi-dominio-privado.railway.app']
